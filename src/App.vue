@@ -1,15 +1,13 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <buscarPorCedula/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import buscarPorCedula from '../src/pages/buscarPorCedula.vue';
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    buscarPorCedula
   }
 }
 </script>
