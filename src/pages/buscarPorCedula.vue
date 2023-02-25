@@ -1,8 +1,7 @@
 <template>
   <h1>Buscar Por Cedula</h1>
-  <input v-model="cedula" type="text" />
-  <button v-on:click="consultarCliente">Buscar</button>
-   <button v-on:click="insertar">Insertar</button>
+  <h2>{{ idPrueba }}</h2>
+   <button v-on:click="procesarGuardado()">Procesar</button>
 </template>
 
 <script>
@@ -11,6 +10,8 @@ export default {
   data() {
     return {
       cedula: null,
+      idPrueba:null,
+      id2:this.$route.params.idCliente,
     }
   },
 
@@ -27,8 +28,19 @@ export default {
             cedula:"111111"
         }
         insertarFachada(miCliente);
-    }
+    },
+    procesarGuardado(){
+         console.log(id)
+      }
   },
+  mounted(){
+        console.log("Entro a la pagina buscar")
+        console.log(this.$route)
+        console.log(this.$route.params)
+        const {idCliente}=this.$route.params
+        console.log(idCliente)
+        this.idPrueba=idCliente
+    }
 };
 </script>
 

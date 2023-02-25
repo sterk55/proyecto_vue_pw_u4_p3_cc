@@ -1,17 +1,20 @@
 <template>
   
   <!-- <BuscarPorCedula/>-->
+  <Navbar/>
   <router-view/>
 </template>
 
 <script>
 import BuscarPorCedula from './pages/buscarPorCedula.vue'
+import Navbar from './components/Navbar.vue';
 
 
 export default {
   name: 'App',
   components: {
-    BuscarPorCedula
+    BuscarPorCedula,
+    Navbar
   }
 }
 </script>

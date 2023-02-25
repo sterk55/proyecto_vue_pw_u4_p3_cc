@@ -37,7 +37,7 @@ const routes = [
         component:  ()=> import (/* webpackChunkName: "Insertar" */ '../pages/Insertar')
     },
     {
-        path: '/buscar',
+        path:'/buscar/:idCliente',
         component: ()=> import (/* webpackChunkName: "Buscar" */ '../pages/buscarPorCedula')
     },
     {
