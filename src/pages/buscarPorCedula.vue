@@ -1,7 +1,8 @@
 <template>
   <h1>Buscar Por Cedula</h1>
+  <button type="button" class="btn btn-primary" v-on:click="buscarCliente()">Buscar</button>
   <h2>{{ idPrueba }}</h2>
-   <button v-on:click="procesarGuardado()">Procesar</button>
+   <button class="btn btn-primary" v-on:click="procesarGuardado()">Procesar</button>
 </template>
 
 <script>

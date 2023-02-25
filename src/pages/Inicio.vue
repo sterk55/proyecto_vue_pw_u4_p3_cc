@@ -1,5 +1,7 @@
 <template>
-  <h1>Bienvenido</h1>
+  <div class="alert alert-primary" role="alert">
+  Bienvenido!
+</div>
 </template>
 
 <script>
