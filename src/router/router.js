@@ -33,7 +33,7 @@ const routes = [
         component: ()=> import (/* webpackChunkName: "Actualizar" */ '../pages/Actualizar')
     },
     {
-        path: '/insertar',
+        path: '/insertar/',
         component:  ()=> import (/* webpackChunkName: "Insertar" */ '../pages/Insertar')
     },
     {
@@ -47,6 +47,11 @@ const routes = [
     {
         path: '/:pathMatch(.*)*',
         component: ()=> import (/* webpackChunkName: "NoFound" */ '../pages/NoFound')
+    },
+    {
+        path: '/negado',
+        name: '403',
+        component: () => import('../pages/Negado')
     }
 
 ]
@@ -55,5 +60,22 @@ const router = createRouter({
     history: createWebHashHistory(),
     routes,
 })
+
+
+//Guardianes en Vue.JS
+router.beforeEach((to, from, next) => {
+    console.log({to, from, next});
+
+    const random = Math.random()*10
+    if(random>5){
+        console.log("autorizado")
+        next()
+    }else{
+        console.log("no autorizado")
+        next({name:'403'})
+    }
+
+})
+
 
 export default router
