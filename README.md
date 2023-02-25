@@ -1,4 +1,4 @@
-# proyecto_vue_pw_u4_p3_cc
+# proyecto_vue_pw_u4_p3_js
 
 ## Project setup
 ```
@@ -15,9 +15,9 @@ npm run serve
 npm run build
 ```
 
-### Lints and fixes files
+### Run your unit tests
 ```
-npm run lint
+npm run test:unit
 ```
 
 ### Customize configuration
